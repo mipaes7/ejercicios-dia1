@@ -1,18 +1,23 @@
-// function countLetters(str, letra) {
-//     let count = 0
-//     for (let i = 0; i < str.length; i++) {
-//         if (str[i] === letra) count++;
-//     }
-
-//     return count;
-// }
-
 function countLetters(str, letra) {
-    let arr = str.split('');
+    let count = 0
+    let lowerCase = str.toLowerCase();   
 
-    let result = arr.filter(i => i === letra);
+    for (let i = 0; i < lowerCase.length; i++) {
+        if (lowerCase[i] === letra) count++;
+    }
 
-    return result.length;
+    return count;
 }
 
-console.log(countLetters('aaaaaabb', 'a'));
+// function countLetters(str, letra) {
+
+//     let lowerCase = str.toLowerCase();
+
+//     let arr = lowerCase.split('');
+
+//     let result = arr.filter(i => i === letra);
+
+//     return result.length;
+// }
+
+console.log(countLetters('aAaaaabb', 'a'));
